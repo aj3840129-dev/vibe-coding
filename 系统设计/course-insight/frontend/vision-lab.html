@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>视觉验证实验室 · 智课云舱</title><link rel="stylesheet" href="/styles.css"></head>
+<body class="lab-body"><main class="lab-shell">
+  <header class="management-heading"><div><p class="eyebrow">AETHERCLASS / VALIDATION</p><h1>视觉验证实验室</h1><p>用真实视频验证模型，让每个结论都有样本依据。</p></div><a class="ghost-button" href="/">返回工作空间</a></header>
+  <div class="lab-grid"><section class="management-panel"><h2>01 · 选择真实样本</h2><p class="tool-hint">视频与摄像头画面只在本浏览器处理，不上传到课堂，也不计入课堂统计。此处验证人脸存在、举手和闭眼，不进行身份识别。</p><label>本地视频<input id="videoFile" type="file" accept="video/*"></label><label>区间标签 JSON（可选）<input id="labelFile" type="file" accept=".json,application/json"></label><p class="tool-hint">没有人工标签时仅输出检测结果与耗时，不显示准确率。</p><div class="lab-actions"><button id="runVideo">运行视频回放</button><button id="runCamera" class="ghost-button">使用真实摄像头</button><button id="stopLab" class="ghost-button" disabled>停止</button></div><p id="labStatus" role="status">等待选择样本 · 无需开启虚拟学生摄像头</p><video id="labVideo" controls muted playsinline></video></section>
+  <section class="management-panel"><h2>02 · 查看验证结果</h2><div id="labSummary" class="lab-summary">尚未运行</div><div id="labMetrics"></div><button id="exportLab" class="ghost-button" disabled>导出完整 JSON 报告</button><h3>最近检测样本</h3><div class="table-scroll"><table class="activity-table"><thead><tr><th>视频秒</th><th>人脸</th><th>举手</th><th>闭眼</th><th>耗时</th></tr></thead><tbody id="labSamples"></tbody></table></div></section></div>
+  <section class="management-panel"><h2>03 · 建立可复现的验收集</h2><p>分别录制正常正脸、侧脸、低光、眼镜、遮挡、空座、举手与短暂眨眼；每段包含正例和反例。请让另一位标注者复核边界，训练调参样本与最终验收样本分开。</p><p>标签以视频秒为单位，区间左闭右开，不得重叠。举手和闭眼是逐帧状态，课堂还会增加持续时间判断。闭眼不等于睡觉，切屏不等于走神。</p><pre class="label-example">{"intervals":[
+  {"start":0,"end":5,"facePresent":true,"handRaised":false,"eyesClosed":false},
+  {"start":5,"end":8,"facePresent":true,"handRaised":true,"eyesClosed":false}
+]}</pre><p class="tool-hint">回放每 0.25 秒定位一次视频帧。摄像头按处理速度采样。报告包含标签覆盖率、不可判定样本、混淆矩阵和检测耗时；召回率按可判定样本计算，必须结合覆盖率阅读。真人多设备课堂需在 HTTPS 环境另行验收。</p></section>
+</main><script src="/vision-metrics.js"></script><script src="/vision-lab.js" type="module"></script></body></html>

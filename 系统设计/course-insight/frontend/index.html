@@ -1,0 +1,1208 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#172544"/>
+    <meta name="description" content="智课云舱，连接课堂参与、学情分析、教学干预与课后复盘。"/>
+    <title>AetherClass 智课云舱 · 教学工作空间</title>
+    <link rel="stylesheet" href="/styles.css"/>
+  </head>
+  <body>
+    <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="i-grid" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7" rx="2"/>
+        <rect x="14" y="3" width="7" height="7" rx="2"/>
+        <rect x="3" y="14" width="7" height="7" rx="2"/>
+        <rect x="14" y="14" width="7" height="7" rx="2"/>
+      </symbol>
+      <symbol id="i-video" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="13" height="14" rx="3"/>
+        <path d="m16 10 5-3v10l-5-3"/>
+      </symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24">
+        <path d="M4 4v16h16M8 15l4-5 4 2 5-7"/>
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 24 24">
+        <path d="M12 5v15M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2Z"/>
+      </symbol>
+      <symbol id="i-loop" viewBox="0 0 24 24">
+        <path d="M20 8a8 8 0 0 0-14-2L3 9m0-6v6h6M4 16a8 8 0 0 0 14 2l3-3m0 6v-6h-6"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14m-5-5 5 5-5 5"/>
+      </symbol>
+      <symbol id="i-logout" viewBox="0 0 24 24">
+        <path d="M10 4H4v16h6M9 12h12m-4-4 4 4-4 4"/>
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="m12 3 8 3v6c0 4-5 8-8 9-3-1-8-5-8-9V6Z"/>
+        <path d="m8 12 3 3 5-6"/>
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24">
+        <path d="m12 3 2.7 6.3L21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7Z"/>
+      </symbol>
+      <symbol id="i-people" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="3"/>
+        <path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5"/>
+      </symbol>
+      <symbol id="i-signal" viewBox="0 0 24 24">
+        <path d="M3 13h4l3-9 4 16 3-9h4"/>
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 7v5l3 2"/>
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14"/>
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24">
+        <path d="m9 5 7 7-7 7"/>
+      </symbol>
+    </svg>
+    <div id="appNotice" class="app-notice hidden" role="status" aria-live="polite">
+    </div>
+    <!-- 各角色视图保留独立容器，交互脚本负责可见性，布局组件共享设计令牌。 -->
+    <main id="loginView" class="login-shell">
+      <section class="login-hero">
+        <a class="brand" href="#" aria-label="智课云舱">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32">
+              <path d="M5 25 14 6h4l9 19h-6l-5-12-5 12Z" fill="currentColor"/>
+              <path d="M12 21h8" stroke="#91b0ff" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="brand-name">智课云舱<span>AETHERCLASS</span>
+          </div>
+        </a>
+        <div class="hero-main">
+          <span class="hero-badge">
+            <i>
+            </i>连接课堂里的每一次反馈</span>
+            <h1>看见学习，<br/>让教学更进一步<span>。</span>
+            </h1>
+            <p class="hero-copy">从课堂参与到学情洞察，从即时回应到课后复盘。<br class="desktop-break"/>让每一次教学调整，都有迹可循。</p>
+            <div class="hero-loop" aria-label="教学闭环：采集、分析、干预、复盘">
+              <div>
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-signal"/>
+                </svg>
+                <strong>感知</strong>
+                <span>多源课堂反馈</span>
+              </div>
+              <i>
+              </i>
+              <div>
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-spark"/>
+                </svg>
+                <strong>洞察</strong>
+                <span>可解释学情分析</span>
+              </div>
+              <i>
+              </i>
+              <div>
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-loop"/>
+                </svg>
+                <strong>回应</strong>
+                <span>教学干预跟进</span>
+              </div>
+              <i>
+              </i>
+              <div>
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-chart"/>
+                </svg>
+                <strong>成长</strong>
+                <span>沉淀课堂复盘</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-footer">
+            <span>为专注教学而设计</span>
+            <span>AETHERCLASS / 智课云舱</span>
+          </div>
+        </section>
+        <section class="login-form-area">
+          <div class="login-panel">
+            <p class="eyebrow">开始一堂好课</p>
+            <h2>欢迎来到智课云舱</h2>
+            <p class="login-subtitle">选择你的身份，进入教学与学习工作空间。</p>
+            <div class="role-tabs" role="group" aria-label="选择登录身份">
+              <button id="teacherRoleButton" class="role-tab active" type="button">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-book"/>
+                </svg>教师</button>
+                <button id="studentRoleButton" class="role-tab" type="button">
+                  <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-people"/>
+                  </svg>学生</button>
+                </div>
+                <label for="loginUsernameInput">账号</label><input id="loginUsernameInput" autocomplete="username" maxlength="32" placeholder="3–32 位字母、数字或下划线"/><label for="loginPasswordInput">密码</label><input id="loginPasswordInput" type="password" autocomplete="current-password" maxlength="128" placeholder="至少 8 位密码"/><label id="registerNameField" class="hidden">你的姓名<input id="loginNameInput" autocomplete="name" maxlength="40" placeholder="课堂中显示的姓名"/></label>
+                <label id="roomLoginField">所在教室<select id="loginRoomSelect">
+                  <option value="A101">A101 云课堂</option>
+                  <option value="A102">A102 实验室</option>
+                  <option value="B201">B201 项目教室</option>
+                </select>
+              </label>
+              <label id="teacherAccessCodeField" class="hidden">教师注册邀请码 <span class="field-optional">按部署配置填写</span>
+                <input id="teacherAccessCodeInput" type="password" autocomplete="current-password" placeholder="未配置访问码时可留空"/>
+              </label>
+              <button id="loginButton" class="wide-button" type="button">进入工作空间 <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#i-arrow"/>
+              </svg>
+            </button>
+            <button id="authModeButton" class="ghost-button wide-button" type="button">没有账号？注册新账号</button><p id="loginMessage" class="form-message" role="alert" aria-live="polite">
+            </p>
+            <div class="login-note">
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#i-shield"/>
+              </svg>
+              <p>
+                <strong>独立账号 · 独立教学空间</strong>
+                <span>课堂历史与资料按教师账号隔离。学生使用课堂码加入，摄像头和屏幕均需主动授权。</span>
+              </p>
+            </div>
+          </div>
+          <p class="login-bottom">教学有温度，反馈有回响。</p>
+        </section>
+      </main>
+      <main id="teacherHomeView" class="meeting-shell app-shell hidden">
+        <aside class="workspace-sidebar" aria-label="教师导航">
+          <a class="brand" href="#" data-page="teacherHome" aria-label="智课云舱首页">
+            <div class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M5 25 14 6h4l9 19h-6l-5-12-5 12Z" fill="currentColor"/>
+                <path d="M12 21h8" stroke="#91b0ff" stroke-width="3"/>
+              </svg>
+            </div>
+            <div class="brand-name">智课云舱<span>AETHERCLASS</span>
+            </div>
+          </a>
+          <div class="workspace-tag">
+            <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#i-book"/>
+            </svg>教师工作空间</div>
+            <p class="nav-caption">工作空间</p>
+            <nav data-role="teacher">
+              <button type="button" data-page="teacherHome" class="nav-item active" aria-current="page">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-grid"/>
+                </svg>
+                <span>教学工作台</span>
+              </button>
+              <button type="button" data-page="teacherClass" class="nav-item">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-video"/>
+                </svg>
+                <span>实时课堂</span>
+              </button>
+              <button type="button" data-page="review" class="nav-item">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-chart"/>
+                </svg>
+                <span>课堂复盘</span>
+              </button>
+            </nav>
+            <div class="sidebar-footer">
+              <div class="sidebar-note">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-loop"/>
+                </svg>
+                <div>从反馈，到进步<span>让教学形成完整闭环</span>
+                </div>
+              </div>
+              <button class="logout-button nav-item" type="button">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-logout"/>
+                </svg>
+                <span>退出工作空间</span>
+              </button>
+              <span class="sidebar-version">AetherClass · 智能教学平台</span>
+            </div>
+          </aside>
+          <div class="workspace-body">
+            <header class="meeting-header">
+              <div>
+                <p class="eyebrow">教学工作空间 / 总览</p>
+                <h1>教师工作台</h1>
+              </div>
+              <div class="header-actions">
+                <span class="context-pill">
+                  <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-book"/>
+                  </svg>准备好，开始一堂好课</span>
+                </div>
+              </header>
+              <section class="welcome-banner">
+                <div>
+                  <span class="welcome-kicker">每一堂课，都是新的开始</span>
+                  <h2>把课堂反馈，转化为教学行动。</h2>
+                  <p>创建课堂，邀请学生，让参与、分析与复盘连成一条线。</p>
+                </div>
+                <div class="welcome-orbit" aria-hidden="true">
+                  <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-loop"/>
+                  </svg>
+                </div>
+              </section>
+              <section id="teacherSetup" class="workspace-grid">
+                <article class="command-card setup-card">
+                  <div class="card-heading">
+                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                      <use href="#i-plus"/>
+                    </svg>
+                    <h2>开设新课堂</h2>
+                  </div>
+                  <p class="section-copy">设置本次教学内容，生成专属课堂码。</p>
+                  <label>课堂名称<input id="classTitleInput" value="系统设计与实践线上课堂" maxlength="120"/>
+                </label>
+                <label>本节主题<input id="classTopicInput" value="AI Coding 与智能课堂系统设计" maxlength="200"/>
+              </label>
+              <label>主教室<select id="classRoomSelect">
+                <option value="A101">A101 云课堂</option>
+                <option value="A102">A102 实验室</option>
+                <option value="B201">B201 项目教室</option>
+              </select>
+            </label>
+            <button id="startClassButton" class="wide-button" type="button">开设课堂 <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#i-arrow"/>
+            </svg>
+          </button>
+        </article>
+        <article class="command-card">
+          <div class="card-heading">
+            <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#i-video"/>
+            </svg>
+            <h2>当前课堂</h2>
+          </div>
+          <div id="teacherClassPreview" class="class-preview">
+            <div class="empty-state">
+              <strong>还没有进行中的课堂</strong>
+              <span>在左侧完成设置，即可邀请学生加入。</span>
+            </div>
+          </div>
+          <button id="resumeClassButton" class="wide-button ghost-button hidden" type="button">返回进行中的课堂 <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-arrow"/>
+          </svg>
+        </button>
+        <div class="workflow-note">
+          <h3>一堂课的完整路径</h3>
+          <ol>
+            <li>
+              <b>01</b>
+              <span>开课与加入<small>同步课堂成员与教室信息</small>
+              </span>
+            </li>
+            <li>
+              <b>02</b>
+              <span>洞察与回应<small>结合学情，发起教学干预</small>
+              </span>
+            </li>
+            <li>
+              <b>03</b>
+              <span>复盘与沉淀<small>回看反馈，调整下一次教学</small>
+              </span>
+            </li>
+          </ol>
+        </div>
+      </article>
+    </section>
+    <section id="teacherHistory" class="command-card history-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">回看与沉淀</p>
+          <h2>历史课堂</h2>
+          <p class="section-copy">课堂结束后，教学记录与干预反馈将在这里保留。</p>
+        </div>
+        <button id="refreshHistoryButton" class="ghost-button" type="button">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-loop"/>
+          </svg>刷新记录</button>
+        </div>
+        <div id="teacherHistoryList" class="history-list">
+          <div class="empty-state">
+            <strong>暂无历史课堂</strong>
+            <span>完成第一堂课后，在这里回看课堂分析与反馈。</span>
+          </div>
+        </div>
+      </section>
+      <details class="method-note">
+        <summary>
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-shield"/>
+          </svg>了解学情数据与使用边界 <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#i-chevron"/>
+        </svg>
+      </summary>
+      <p>学情提示结合页面状态、学生反馈与授权后的画面特征。人脸、举手和持续闭眼检测来自本地托管的 MediaPipe 预训练模型；注意力与风险指标由可解释规则估计，仅辅助教师判断，应结合实际课堂表现使用。</p>
+    </details>
+    <footer class="workspace-footer">AetherClass 智课云舱<span>教学准备 → 课堂感知 → 教学干预 → 效果复盘</span>
+    </footer>
+  </div>
+</main>
+<main id="studentJoinView" class="student-shell app-shell hidden">
+  <aside class="workspace-sidebar" aria-label="学生导航">
+    <a class="brand" href="#" data-page="studentJoin" aria-label="智课云舱首页">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32">
+          <path d="M5 25 14 6h4l9 19h-6l-5-12-5 12Z" fill="currentColor"/>
+          <path d="M12 21h8" stroke="#91b0ff" stroke-width="3"/>
+        </svg>
+      </div>
+      <div class="brand-name">智课云舱<span>AETHERCLASS</span>
+      </div>
+    </a>
+    <div class="workspace-tag">
+      <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+        <use href="#i-people"/>
+      </svg>学生学习空间</div>
+      <p class="nav-caption">工作空间</p>
+      <nav data-role="student">
+        <button type="button" data-page="studentJoin" class="nav-item active" aria-current="page">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-grid"/>
+          </svg>
+          <span>加入课堂</span>
+        </button>
+        <button type="button" data-page="studentClass" class="nav-item">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-video"/>
+          </svg>
+          <span>我的课堂</span>
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="sidebar-note">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-loop"/>
+          </svg>
+          <div>从反馈，到进步<span>让教学形成完整闭环</span>
+          </div>
+        </div>
+        <button class="logout-button nav-item" type="button">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-logout"/>
+          </svg>
+          <span>退出工作空间</span>
+        </button>
+        <span class="sidebar-version">AetherClass · 智能教学平台</span>
+      </div>
+    </aside>
+    <div class="workspace-body">
+      <header class="meeting-header">
+        <div>
+          <p class="eyebrow">学习工作空间 / 课堂入口</p>
+          <h1>准备好，一起加入课堂</h1>
+        </div>
+        <div class="header-actions">
+          <span class="context-pill">
+            <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#i-people"/>
+            </svg>每一份反馈都值得被看见</span>
+          </div>
+        </header>
+        <section class="welcome-banner student-welcome">
+          <div>
+            <span class="welcome-kicker">在这里，安心表达每一个问题</span>
+            <h2>带着好奇，走进今天的课堂。</h2>
+            <p>输入教师提供的课堂码，参与互动、提问，并及时分享你的学习状态。</p>
+          </div>
+          <div class="welcome-orbit" aria-hidden="true">
+            <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#i-book"/>
+            </svg>
+          </div>
+        </section>
+        <section class="workspace-grid join-grid">
+          <article class="command-card setup-card">
+            <div class="card-heading">
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#i-video"/>
+              </svg>
+              <h2>加入课堂</h2>
+            </div>
+            <label>课堂码<input id="joinCodeInput" value="" placeholder="例如 AETHER-0723" autocomplete="off" spellcheck="false" maxlength="32"/>
+          </label>
+          <label>所在教室<select id="joinRoomSelect">
+            <option value="A101">A101 云课堂</option>
+            <option value="A102">A102 实验室</option>
+            <option value="B201">B201 项目教室</option>
+          </select>
+        </label>
+        <button id="joinClassButton" class="wide-button" type="button">加入课堂 <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#i-arrow"/>
+        </svg>
+      </button>
+      <p id="joinMessage" class="form-message" role="alert" aria-live="polite">
+      </p>
+    </article>
+    <article class="command-card">
+      <div class="card-heading">
+        <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#i-book"/>
+        </svg>
+        <h2>课堂信息</h2>
+      </div>
+      <div id="studentClassPreview" class="class-preview">
+        <div class="empty-state">
+          <strong>等待加入课堂</strong>
+          <span>填写课堂码后，即可查看本节教学安排。</span>
+        </div>
+      </div>
+      <div class="privacy-note">
+        <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#i-shield"/>
+        </svg>
+        <div>
+          <strong>由你决定，何时开启摄像头</strong>
+          <p>未开启时，仅记录页面可见性、窗口聚焦和空闲时长。开启后，在浏览器分析画面特征并上报信号；你可以随时关闭摄像头。</p>
+        </div>
+      </div>
+    </article>
+  </section>
+</div>
+</main>
+<main id="teacherView" class="meeting-shell app-shell hidden">
+  <aside class="workspace-sidebar" aria-label="教师导航">
+    <a class="brand" href="#" data-page="teacherHome" aria-label="智课云舱首页">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32">
+          <path d="M5 25 14 6h4l9 19h-6l-5-12-5 12Z" fill="currentColor"/>
+          <path d="M12 21h8" stroke="#91b0ff" stroke-width="3"/>
+        </svg>
+      </div>
+      <div class="brand-name">智课云舱<span>AETHERCLASS</span>
+      </div>
+    </a>
+    <div class="workspace-tag">
+      <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+        <use href="#i-book"/>
+      </svg>教师工作空间</div>
+      <p class="nav-caption">工作空间</p>
+      <nav data-role="teacher">
+        <button type="button" data-page="teacherHome" class="nav-item">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-grid"/>
+          </svg>
+          <span>教学工作台</span>
+        </button>
+        <button type="button" data-page="teacherClass" class="nav-item active" aria-current="page">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-video"/>
+          </svg>
+          <span>实时课堂</span>
+        </button>
+        <button type="button" data-page="review" class="nav-item">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-chart"/>
+          </svg>
+          <span>课堂复盘</span>
+        </button>
+        <p class="nav-caption">本节课堂</p>
+        <a class="nav-item nav-anchor" href="#teacherFollowup">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-loop"/>
+          </svg>
+          <span>干预与跟进</span>
+        </a>
+        <a class="nav-item nav-anchor" href="#teacherMaterials">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-book"/>
+          </svg>
+          <span>课程资料</span>
+        </a>
+        <a class="nav-item nav-anchor" href="#teacherRooms">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-people"/>
+          </svg>
+          <span>教室协同</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="sidebar-note">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-loop"/>
+          </svg>
+          <div>从反馈，到进步<span>让教学形成完整闭环</span>
+          </div>
+        </div>
+        <button class="logout-button nav-item" type="button">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-logout"/>
+          </svg>
+          <span>退出工作空间</span>
+        </button>
+        <span class="sidebar-version">AetherClass · 智能教学平台</span>
+      </div>
+    </aside>
+    <div class="workspace-body">
+      <header class="meeting-header">
+        <div>
+          <p class="eyebrow">教学工作空间 / 实时课堂</p>
+          <h1 id="teacherMeetingTitle">系统设计与实践线上课堂</h1>
+        </div>
+        <div class="header-actions">
+          <button id="teacherStreamStatus" class="live-pill" type="button" title="重新连接实时课堂数据">连接中</button>
+          <button id="exportReportButton" class="ghost-button icon-button" type="button">导出报告</button>
+          <button id="endClassButton" class="danger-button" type="button">结束课堂</button>
+        </div>
+      </header>
+      <section id="teacherOverview" class="dashboard-metrics" aria-label="课堂实时概览">
+        <div class="metric-row">
+          <div>
+            <span>
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#i-people"/>
+              </svg>当前教室在场</span>
+              <strong id="teacherActiveStudents">--</strong>
+              <small>含传感器补充人数</small>
+            </div>
+            <div>
+              <span>
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-signal"/>
+                </svg>专注状态占比</span>
+                <strong id="teacherFocusRate">--%</strong>
+                <small>规则估计 · 辅助教学判断</small>
+              </div>
+              <div>
+                <span>
+                  <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-chart"/>
+                  </svg>课堂风险指标</span>
+                  <strong id="teacherRiskScore">--</strong>
+                  <small>结合多源信号综合评估</small>
+                </div>
+              </div>
+              <div id="teacherLoopSummary" class="loop-summary">
+                <span>
+                  <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-loop"/>
+                  </svg>教学反馈闭环</span>
+                  <strong>等待课堂反馈</strong>
+                  <small>发现问题 → 教学回应 → 确认效果</small>
+                </div>
+              </section>
+              <section class="teacher-grid">
+                <article class="meeting-stage">
+                  <div class="stage-toolbar">
+                    <div>
+                      <span class="stage-dot">
+                      </span>
+                      <strong>课堂现场</strong>
+                      <small>学生状态视图</small>
+                    </div>
+                    <span id="meetingCode">课堂码 --</span>
+                  </div>
+                  <section id="teacherSharePanel" class="screen-share-panel hidden">
+                    <div class="screen-share-heading">
+                      <strong>我的屏幕预览</strong>
+                      <span id="teacherShareStatus">尚未共享</span>
+                    </div>
+                    <video id="teacherScreenPreview" autoplay muted playsinline>
+                    </video>
+                    <canvas id="teacherScreenCanvas" width="960" height="540">
+                    </canvas>
+                  </section>
+                  <div id="teacherVideoGrid" class="video-grid">
+                    <div class="empty-state">
+                      <strong>等待学生加入</strong>
+                      <span>将课堂码分享给学生，参与状态将实时显示在这里。</span>
+                    </div>
+                  </div>
+                  <div class="meeting-controls">
+                    <button id="muteAllButton" type="button">课堂安静提示</button>
+                    <button id="pollButton" type="button">发起投票</button>
+                    <button id="screenShareButton" type="button">共享屏幕</button>
+                    <button id="shareMaterialButton" type="button">共享资料</button>
+                  </div>
+                  <section id="teacherPollPanel" class="poll-panel hidden">
+                  </section>
+                  <details class="sensor-tools">
+                    <summary>传感器联调 <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                      <use href="#i-chevron"/>
+                    </svg>
+                  </summary>
+                  <div class="meeting-controls">
+                    <label class="sr-only" for="teacherSensorRoomSelect">模拟传感器所在教室</label>
+                    <select id="teacherSensorRoomSelect" class="inline-select">
+                      <option value="A101">A101 云课堂</option>
+                      <option value="A102">A102 实验室</option>
+                      <option value="B201">B201 项目教室</option>
+                    </select>
+                    <button id="teacherSensorEnterButton" type="button">模拟进入</button>
+                    <button id="teacherSensorLeaveButton" type="button">模拟离开</button>
+                  </div>
+                  <p>用于验证门禁人数与在线课堂人数的协同逻辑。</p>
+                </details>
+              </article>
+              <aside class="teacher-command">
+                <section class="command-card insight-card">
+                  <div class="card-heading">
+                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                      <use href="#i-spark"/>
+                    </svg>
+                    <h2>学情洞察</h2>
+                    <span class="subtle-tag">辅助决策</span>
+                  </div>
+                  <p class="section-copy">汇总课堂信号，形成可执行的教学建议。</p>
+                  <div id="teacherReportBox" class="report-box">
+                    <div class="empty-state">
+                      <strong>准备生成学情分析</strong>
+                      <span>学生参与课堂后，点击下方按钮查看分析与建议。</span>
+                    </div>
+                  </div>
+                  <button id="teacherReportButton" class="wide-button" type="button">
+                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                      <use href="#i-spark"/>
+                    </svg>生成学情分析</button>
+                  </section>
+                  <section class="command-card">
+                    <div class="card-heading">
+                      <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#i-people"/>
+                      </svg>
+                      <h2>需要关注</h2>
+                    </div>
+                    <div id="teacherStudentList" class="compact-list">
+                      <div class="empty-state">
+                        <strong>暂无需要关注的学生</strong>
+                        <span>新的课堂反馈会同步显示在这里。</span>
+                      </div>
+                    </div>
+                  </section>
+                  <details class="command-card monitoring-details">
+                    <summary>实时监测信号 <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                      <use href="#i-chevron"/>
+                    </svg>
+                  </summary>
+                  <p class="section-copy">查看各类信号的接入与活跃情况。</p>
+                  <div id="teacherSignalSummary" class="signal-summary">
+                  </div>
+                </details>
+              </aside>
+            </section>
+            <section id="teacherFollowup" class="followup-section">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">从发现问题，到确认效果</p>
+                  <h2>教学干预与跟进</h2>
+                  <p class="section-copy">记录教学回应，收集学生反馈，让每次调整都有结果。</p>
+                </div>
+              </div>
+              <div class="followup-grid">
+                <article class="command-card">
+                  <div class="card-heading">
+                    <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                      <use href="#i-loop"/>
+                    </svg>
+                    <h2>发起教学回应</h2>
+                  </div>
+                  <div class="intervention-form">
+                    <label>关注对象<select id="interventionStudentSelect">
+                      <option value="all">全体学生</option>
+                    </select>
+                  </label>
+                  <label>回应方式<select id="interventionActionSelect">
+                    <option value="review">复习讲解</option>
+                    <option value="check_in">理解确认</option>
+                    <option value="support">个别关怀</option>
+                  </select>
+                </label>
+                <label class="full-width">给学生的说明<textarea id="interventionNoteInput" rows="3" maxlength="500" placeholder="例如：我们用一个具体例子再回顾刚才的概念，完成后请告诉我是否理解。">
+                </textarea>
+              </label>
+            </div>
+            <div class="form-footer">
+              <p>学生可反馈理解情况，教师可继续跟进。</p>
+              <button id="createInterventionButton" type="button">发送教学回应 <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#i-arrow"/>
+              </svg>
+            </button>
+          </div>
+          <p id="interventionMessage" class="form-message" role="status">
+          </p>
+          <div class="list-section-heading">
+            <h3>跟进记录</h3>
+            <span>以学生反馈确认效果</span>
+          </div>
+          <div id="teacherInterventionList" class="intervention-list">
+            <div class="empty-state">
+              <strong>还没有教学回应记录</strong>
+              <span>从一次讲解、提醒或关怀开始，跟进学生的真实反馈。</span>
+            </div>
+          </div>
+        </article>
+        <article class="command-card">
+          <div class="card-heading">
+            <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#i-clock"/>
+            </svg>
+            <h2>课堂动态</h2>
+            <span class="subtle-tag">实时</span>
+          </div>
+          <div id="teacherEventList" class="event-list">
+            <div class="empty-state">
+              <strong>等待第一条课堂动态</strong>
+              <span>学生加入、互动和教学操作会依次记录。</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="teacherMaterials" class="materials-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">课程知识，持续积累</p>
+          <h2>课程资料库</h2>
+          <p class="section-copy">将教学内容加入资料库，支持学生围绕本节内容提问。</p>
+        </div>
+      </div>
+      <div class="materials-grid">
+        <article class="command-card setup-card">
+          <label>资料标题<input id="documentTitleInput" maxlength="120" placeholder="例如：第 3 讲 · 系统架构设计"/>
+        </label>
+        <label>资料正文<textarea id="documentContentInput" rows="6" maxlength="50000" placeholder="粘贴课程讲义、知识点或常见问题。资料问答将参考这些内容回答。">
+        </textarea>
+      </label>
+      <div class="form-footer">
+        <p>支持文本讲义与课程知识点。</p>
+        <button id="saveDocumentButton" type="button">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-plus"/>
+          </svg>保存资料</button>
+        </div>
+        <p id="documentMessage" class="form-message" role="status">
+        </p>
+      </article>
+      <article class="command-card">
+        <div class="card-heading">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-book"/>
+          </svg>
+          <h2>已收录资料</h2>
+        </div>
+        <div id="teacherDocumentList" class="document-list">
+          <div class="empty-state">
+            <strong>资料库准备中</strong>
+            <span>添加课程内容，让学生的问题有据可查。</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section id="teacherRooms" class="rooms-section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">多教室同步</p>
+        <h2>教室协同</h2>
+        <p class="section-copy">点击教室卡片，切换课堂状态视图。</p>
+      </div>
+    </div>
+    <div id="teacherRoomGrid" class="room-grid">
+    </div>
+  </section>
+  <footer class="workspace-footer">AetherClass 智课云舱<span>学情指标为教学辅助参考，请结合实际情况判断。</span>
+  </footer>
+</div>
+</main>
+<main id="reviewView" class="meeting-shell app-shell hidden">
+  <aside class="workspace-sidebar" aria-label="教师导航">
+    <a class="brand" href="#" data-page="teacherHome" aria-label="智课云舱首页">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32">
+          <path d="M5 25 14 6h4l9 19h-6l-5-12-5 12Z" fill="currentColor"/>
+          <path d="M12 21h8" stroke="#91b0ff" stroke-width="3"/>
+        </svg>
+      </div>
+      <div class="brand-name">智课云舱<span>AETHERCLASS</span>
+      </div>
+    </a>
+    <div class="workspace-tag">
+      <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+        <use href="#i-book"/>
+      </svg>教师工作空间</div>
+      <p class="nav-caption">工作空间</p>
+      <nav data-role="teacher">
+        <button type="button" data-page="teacherHome" class="nav-item">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-grid"/>
+          </svg>
+          <span>教学工作台</span>
+        </button>
+        <button type="button" data-page="teacherClass" class="nav-item">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-video"/>
+          </svg>
+          <span>实时课堂</span>
+        </button>
+        <button type="button" data-page="review" class="nav-item active" aria-current="page">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-chart"/>
+          </svg>
+          <span>课堂复盘</span>
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="sidebar-note">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-loop"/>
+          </svg>
+          <div>从反馈，到进步<span>让教学形成完整闭环</span>
+          </div>
+        </div>
+        <button class="logout-button nav-item" type="button">
+          <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-logout"/>
+          </svg>
+          <span>退出工作空间</span>
+        </button>
+        <span class="sidebar-version">AetherClass · 智能教学平台</span>
+      </div>
+    </aside>
+    <div class="workspace-body">
+      <header class="meeting-header">
+        <div>
+          <p class="eyebrow">教学工作空间 / 课堂复盘</p>
+          <h1 id="reviewTitle">课堂复盘</h1>
+        </div>
+        <div class="header-actions">
+          <button id="backToTeacherButton" class="ghost-button" type="button">返回工作台</button>
+          <button id="reviewExportButton" type="button">导出报告</button>
+        </div>
+      </header>
+      <div class="review-intro">
+        <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#i-chart"/>
+        </svg>
+        <p>
+          <strong>把这一堂课的反馈，带进下一次教学。</strong>
+          <span>回看课堂参与、教学回应与学生确认，找到值得保留和继续改进的地方。</span>
+        </p>
+      </div>
+      <section class="review-grid">
+        <article class="command-card review-summary">
+          <div class="card-heading">
+            <h2>课堂概览</h2>
+            <span class="subtle-tag">整堂课</span>
+          </div>
+          <div id="reviewSummaryCards" class="metric-row">
+          </div>
+          <div id="reviewHighlights" class="highlight-list">
+          </div>
+        </article>
+        <article class="command-card review-timeline">
+          <div class="card-heading">
+            <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#i-signal"/>
+            </svg>
+            <h2>课堂变化趋势</h2>
+          </div>
+          <div id="reviewTimelineChart" class="timeline-chart">
+            <div class="empty-state">
+              <strong>等待课堂采样记录</strong>
+              <span>有持续采集的数据后，可在这里回看课堂变化。</span>
+            </div>
+          </div>
+        </article>
+        <article class="command-card">
+          <h2>结束时状态分布</h2>
+          <div id="statusChart" class="chart-list">
+          </div>
+        </article>
+        <article class="command-card">
+          <h2>教室人数对比</h2>
+          <div class="chart-legend">
+            <span>
+              <i>
+              </i>摄像头接入</span>
+              <span>
+                <i class="secondary">
+                </i>传感器人数</span>
+              </div>
+              <div id="roomChart" class="chart-list">
+              </div>
+            </article>
+            <article class="command-card">
+              <h2>课堂事件</h2>
+              <div id="eventChart" class="chart-list">
+              </div>
+            </article>
+            <article class="command-card review-followup">
+              <div class="card-heading">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-loop"/>
+                </svg>
+                <h2>教学干预复盘</h2>
+              </div>
+              <div id="reviewInterventionList" class="intervention-list">
+                <div class="empty-state">
+                  <strong>暂无干预记录</strong>
+                  <span>课堂中发起的教学回应与学生反馈会汇总在这里。</span>
+                </div>
+              </div>
+            </article>
+          </section>
+          <footer class="workspace-footer">AetherClass 智课云舱<span>记录 → 分析 → 回应 → 验证 → 改进</span>
+          </footer>
+        </div>
+      </main>
+      <main id="studentView" class="student-shell app-shell hidden">
+        <aside class="workspace-sidebar" aria-label="学生导航">
+          <a class="brand" href="#" data-page="studentJoin" aria-label="智课云舱首页">
+            <div class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M5 25 14 6h4l9 19h-6l-5-12-5 12Z" fill="currentColor"/>
+                <path d="M12 21h8" stroke="#91b0ff" stroke-width="3"/>
+              </svg>
+            </div>
+            <div class="brand-name">智课云舱<span>AETHERCLASS</span>
+            </div>
+          </a>
+          <div class="workspace-tag">
+            <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#i-people"/>
+            </svg>学生学习空间</div>
+            <p class="nav-caption">工作空间</p>
+            <nav data-role="student">
+              <button type="button" data-page="studentJoin" class="nav-item">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-grid"/>
+                </svg>
+                <span>加入课堂</span>
+              </button>
+              <button type="button" data-page="studentClass" class="nav-item active" aria-current="page">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-video"/>
+                </svg>
+                <span>我的课堂</span>
+              </button>
+              <p class="nav-caption">本节学习</p>
+              <a class="nav-item nav-anchor" href="#studentFeedback">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-loop"/>
+                </svg>
+                <span>我的反馈</span>
+              </a>
+              <a class="nav-item nav-anchor" href="#studentQa">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-book"/>
+                </svg>
+                <span>课程问答</span>
+              </a>
+            </nav>
+            <div class="sidebar-footer">
+              <div class="sidebar-note">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-loop"/>
+                </svg>
+                <div>从反馈，到进步<span>让教学形成完整闭环</span>
+                </div>
+              </div>
+              <button class="logout-button nav-item" type="button">
+                <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-logout"/>
+                </svg>
+                <span>退出工作空间</span>
+              </button>
+              <span class="sidebar-version">AetherClass · 智能教学平台</span>
+            </div>
+          </aside>
+          <div class="workspace-body">
+            <header class="meeting-header">
+              <div>
+                <p class="eyebrow">学习工作空间 / 我的课堂</p>
+                <h1 id="studentMeetingTitle">系统设计与实践线上课堂</h1>
+              </div>
+              <div class="header-actions">
+                <button id="studentStreamStatus" class="live-pill" type="button" title="重新连接实时课堂数据">连接中</button>
+              </div>
+            </header>
+            <section class="student-grid">
+              <div class="student-main">
+                <article class="student-stage">
+                  <div class="stage-toolbar">
+                    <div>
+                      <span class="stage-dot">
+                      </span>
+                      <strong>课堂现场</strong>
+                    </div>
+                    <span>保持好奇，随时提问</span>
+                  </div>
+                  <section id="studentScreenPanel" class="screen-share-panel hidden">
+                    <div class="screen-share-heading">
+                      <strong id="studentShareTitle">教师正在共享屏幕</strong>
+                      <span id="studentShareStatus">正在连接画面</span>
+                    </div>
+                    <img id="studentScreenImage" alt="教师共享的课堂屏幕"/>
+                  </section>
+                  <div class="teacher-tile">
+                    <div class="avatar large">师</div>
+                    <div>
+                      <strong id="studentTeacherName">教师课堂</strong>
+                      <span id="studentTopicText">课程讲解与互动将在这里展开</span>
+                    </div>
+                    <span class="subtle-tag">课堂进行中</span>
+                  </div>
+                  <div class="camera-panel">
+                    <video id="cameraPreview" autoplay muted playsinline aria-label="我的摄像头预览">
+                    </video>
+                    <div class="camera-placeholder">
+                      <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#i-video"/>
+                      </svg>
+                      <strong>你的课堂参与空间</strong>
+                      <span>开启摄像头后，这里将显示本地预览</span>
+                    </div>
+                    <span class="camera-label">我的画面 · 本地预览</span>
+                  </div>
+                  <canvas id="cameraCanvas" width="160" height="100">
+                  </canvas>
+                  <div id="cameraReading" class="camera-reading" role="status">摄像头未开启。你仍可通过下方按钮参与课堂反馈。</div>
+                  <div class="meeting-controls">
+                    <button id="cameraButton" type="button">开启摄像头</button>
+                    <button id="raiseHandButton" type="button">举手</button>
+                    <button id="awayButton" type="button">暂离</button>
+                    <button id="backButton" type="button">回到课堂</button>
+                  </div>
+                  <details class="sensor-tools">
+                    <summary>查看识别详情 <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                      <use href="#i-chevron"/>
+                    </svg>
+                  </summary>
+                  <div id="handRaiseDebug" class="camera-reading">举手检测：待开启摄像头</div>
+                  <div id="sleepDebug" class="camera-reading">持续闭眼检测：待开启摄像头</div>
+                  <p>自动检测为辅助信号，请以真实参与情况为准。</p>
+                </details>
+                <section id="studentPollPanel" class="poll-panel hidden">
+                </section>
+              </article>
+              <section id="studentFeedback" class="command-card student-feedback">
+                <div class="section-heading">
+                  <div>
+                    <h2>现在，学习感觉如何？</h2>
+                    <p class="section-copy">轻轻一点，让老师了解你的节奏。</p>
+                  </div>
+                  <span class="subtle-tag">即时反馈</span>
+                </div>
+                <div class="feedback-actions">
+                  <button id="focusedButton" class="feedback-button understood" type="button">
+                    <span aria-hidden="true">✓</span>
+                    <strong>我听懂了</strong>
+                    <small>继续，状态不错</small>
+                  </button>
+                  <button id="confusedButton" class="feedback-button question" type="button">
+                    <span aria-hidden="true">?</span>
+                    <strong>我有疑问</strong>
+                    <small>这里需要再讲一讲</small>
+                  </button>
+                  <button id="tooFastButton" class="feedback-button slower" type="button">
+                    <span aria-hidden="true">↺</span>
+                    <strong>讲太快了</strong>
+                    <small>希望放慢一点节奏</small>
+                  </button>
+                </div>
+                <div class="list-section-heading">
+                  <h3>老师的回应</h3>
+                  <span>告诉老师，这次讲解是否有帮助</span>
+                </div>
+                <div id="studentInterventionList" class="intervention-list">
+                  <div class="empty-state">
+                    <strong>暂时没有待确认的教学回应</strong>
+                    <span>老师发起讲解或关怀后，你可以在这里反馈是否理解。</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <aside class="student-side">
+              <section id="studentQa" class="command-card qa-card">
+                <div class="card-heading">
+                  <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-spark"/>
+                  </svg>
+                  <h2>课程资料问答</h2>
+                  <span class="subtle-tag">学习助手</span>
+                </div>
+                <p class="section-copy">围绕课程提问，参考资料理解知识。</p>
+                <label class="sr-only" for="studentQuestionInput">你的课程问题</label>
+                <textarea id="studentQuestionInput" rows="4" maxlength="2000" placeholder="例如：这套系统如何让分析结果参与教学决策？">
+                </textarea>
+                <button id="studentAskButton" class="wide-button" type="button">提交问题 <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-arrow"/>
+                </svg>
+              </button>
+              <div id="studentAnswerBox" class="answer-box" aria-live="polite">
+                <div class="empty-state">
+                  <strong>每一个问题，都值得好好理解</strong>
+                  <span>输入课程相关问题，回答与参考资料会显示在这里。</span>
+                </div>
+              </div>
+              <details class="qa-history-details">
+                <summary>我的提问记录 <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-chevron"/>
+                </svg>
+              </summary>
+              <div id="studentQaHistory" class="qa-history">
+                <div class="empty-state">
+                  <strong>还没有提问记录</strong>
+                  <span>学习过程中遇到的问题，可以在这里回顾。</span>
+                </div>
+              </div>
+            </details>
+          </section>
+          <section class="command-card">
+            <div class="card-heading">
+              <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#i-signal"/>
+              </svg>
+              <h2>我的学习状态</h2>
+            </div>
+            <div class="student-status-card">
+              <div>
+                <span>课堂参与参考值</span>
+                <strong id="studentAttention">--</strong>
+              </div>
+              <span id="studentStatusText">等待上报</span>
+              <small id="studentMonitorEvidence">自动监测尚未启动</small>
+            </div>
+            <details class="monitoring-details">
+              <summary>查看信号来源 <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#i-chevron"/>
+              </svg>
+            </summary>
+            <div id="studentSignalGrid" class="signal-grid">
+            </div>
+          </details>
+        </section>
+        <section class="command-card">
+          <div class="card-heading">
+            <svg class="icon " viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#i-people"/>
+            </svg>
+            <h2>一起上课的同学</h2>
+          </div>
+          <div id="studentPeerGrid" class="peer-grid">
+            <div class="empty-state">
+              <strong>等待同学加入</strong>
+              <span>课堂参与状态会实时更新。</span>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </section>
+    <footer class="workspace-footer">AetherClass 智课云舱<span>学习的每一步，都可以被回应。</span>
+    </footer>
+  </div>
+</main>
+<script src="/workflows.js" defer>
+</script>
+<script src="/classroom-tools.js" defer></script>
+<script src="/vision-metrics.js" defer></script>
+<script src="/app.js" defer>
+</script>
+</body>
+</html>
+

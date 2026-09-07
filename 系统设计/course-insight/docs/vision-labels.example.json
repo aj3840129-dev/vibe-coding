@@ -1,0 +1,23 @@
+{
+  "intervals": [
+    {
+      "start": 0,
+      "end": 5,
+      "facePresent": true,
+      "handRaised": false,
+      "eyesClosed": false
+    },
+    {
+      "start": 5,
+      "end": 8,
+      "facePresent": true,
+      "handRaised": true,
+      "eyesClosed": false
+    },
+    {
+      "start": 8,
+      "end": 12,
+      "facePresent": false
+    }
+  ]
+}
