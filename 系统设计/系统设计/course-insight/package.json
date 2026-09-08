@@ -1,0 +1,18 @@
+{
+  "name": "course-insight",
+  "version": "0.4.0",
+  "private": true,
+  "description": "课程资料智能问答与课堂实时反馈系统",
+  "scripts": {
+    "start": "node backend/server.js",
+    "start:lan": "node backend/server.js --lan",
+    "check": "node --check backend/server.js && node --check backend/database.js && node --check backend/classroom-tools.js && node --check backend/workflows.js && node --check frontend/app.js && node --check frontend/workflows.js && node --check frontend/classroom-tools.js && node --check frontend/vision-metrics.js && node --check frontend/vision-lab.js && node --check backend/campus.js && node --check backend/campus-gateway.js && node --check frontend/campus.js && node --check scripts/campus-grant.js && node --check scripts/campus-diagnose.js && node --check scripts/check-release.js",
+    "test": "node --test backend/server.test.js",
+    "campus:grant": "node scripts/campus-grant.js",
+    "campus:diagnose": "node scripts/campus-diagnose.js",
+    "release:check": "node scripts/check-release.js"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

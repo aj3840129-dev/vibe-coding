@@ -1,0 +1,48 @@
+
+> course-insight@0.4.0 check
+> node --check backend/server.js && node --check backend/database.js && node --check backend/classroom-tools.js && node --check backend/workflows.js && node --check frontend/app.js && node --check frontend/workflows.js && node --check frontend/classroom-tools.js && node --check frontend/vision-metrics.js && node --check frontend/vision-lab.js && node --check backend/campus.js && node --check backend/campus-gateway.js && node --check frontend/campus.js && node --check scripts/campus-grant.js && node --check scripts/campus-diagnose.js && node --check scripts/check-release.js
+
+
+> course-insight@0.4.0 release:check
+> node scripts/check-release.js
+
+发布检查通过：私有数据目录和设备凭据 URL 未进入跟踪文件。
+
+> course-insight@0.4.0 test
+> node --test backend/server.test.js
+
+▶ 双端课堂闭环、权限、并发与归档
+  ✔ 会话入口和空课堂 (88.5723ms)
+  ✔ 学生课堂码、唯一身份和加入前权限 (127.8464ms)
+  ✔ 遥测、手动反馈、摄像头口径和学生隐私 (93.2009ms)
+  ✔ SSE 推送按身份裁剪并真实同步 (35.2219ms)
+  ✔ 主动暂离保留到返回，疑问记录不被采样抹去 (58.6342ms)
+  ✔ 未知视觉不沿用旧识别，手动举手仍独立保留 (66.5892ms)
+  ✔ 教师资料保存、问答引用和异步并发合并 (262.9424ms)
+  ✔ 教学回应→学生确认→教师结论 (65.2734ms)
+  ✔ 投票、屏幕中继和传感器协同 (124.7764ms)
+  ✔ 独立账号、同名教师同时开课，资料与实时推送隔离 (209.7309ms)
+  ✔ 签到账号去重、关闭后拒绝补签、评论开关与软隐藏 (246.6411ms)
+  ✔ 切屏去重、后台时长与学生授权屏幕隔离 (173.0941ms)
+  ✔ 结课幂等、历史不可变、旧课堂写入拒绝 (174.5208ms)
+  ✔ 模型回答延迟期间结课，回答不污染下一堂课 (252.7703ms)
+  ✔ 重启保留归档，会话失效后需重新登录 (221.8957ms)
+✔ 双端课堂闭环、权限、并发与归档 (2303.4468ms)
+✔ 存储升级保留旧数据，损坏数据保留可追溯副本 (6.4531ms)
+✔ 视觉评估：未知不伪装为负例，未标注不生成准确率 (0.3223ms)
+✔ 举手和闭眼共享判据：低可见度不可判断，单眼闭合不算双眼闭合 (0.2069ms)
+▶ 线下课堂：授权、媒体、观测、教学跟进与不可变归档
+  ✔ 设备目录按教师授权，不泄露凭据，不允许任意 IP (97.7411ms)
+  ✔ 线下教室归属校验、真实 JPEG 中继与重复帧去重 (163.2341ms)
+  ✔ 观察→调整→效果结论，结课归档隔离并停止摄像头 (169.9753ms)
+✔ 线下课堂：授权、媒体、观测、教学跟进与不可变归档 (668.9412ms)
+✔ 媒体网关：设备互斥、过期帧、主动释放与缺少 FFmpeg (151.3034ms)
+✔ RTSP 适配器按完整 JPEG 边界组帧，不返回设备凭据 (3.3141ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3205.1333

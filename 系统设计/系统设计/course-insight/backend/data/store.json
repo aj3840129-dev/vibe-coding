@@ -1,0 +1,1757 @@
+{
+  "schemaVersion": 7,
+  "interventions": [
+    {
+      "id": "66f7ed2c-2c48-494b-9d57-f2d0c7340882",
+      "meetingId": "class-1785921200876",
+      "title": "复习讲解",
+      "message": "111",
+      "kind": "review",
+      "reportId": null,
+      "studentIds": [
+        "stu-1785921139611"
+      ],
+      "responses": [],
+      "status": "open",
+      "createdAt": 1788771118598,
+      "baseline": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 2,
+        "presentStudents": 2,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 81
+      }
+    }
+  ],
+  "archives": [
+    {
+      "meeting": {
+        "id": "class-1785921200876",
+        "code": "A101-0876",
+        "title": "���Կ�",
+        "topic": "t",
+        "roomId": "A101",
+        "status": "ended",
+        "teacherId": "teacher-1785921139125",
+        "startedAt": 1785921200876,
+        "endedAt": 1788771130619,
+        "notice": {
+          "id": 1788771108942,
+          "title": "共享课程资料",
+          "message": "周老师 共享了当前课程资料，学生端可结合 RAG 提问。"
+        }
+      },
+      "review": {
+        "id": 1,
+        "meeting": {
+          "id": "class-1785921200876",
+          "code": "A101-0876",
+          "title": "���Կ�",
+          "topic": "t",
+          "roomId": "A101",
+          "status": "ended",
+          "teacherId": "teacher-1785921139125",
+          "startedAt": 1785921200876,
+          "endedAt": 1788771130619,
+          "notice": {
+            "id": 1788771108942,
+            "title": "共享课程资料",
+            "message": "周老师 共享了当前课程资料，学生端可结合 RAG 提问。"
+          },
+          "durationMinutes": 47499
+        },
+        "metrics": {
+          "totalStudents": 1,
+          "observedStudents": 0,
+          "activeStudents": 0,
+          "sensorPresentStudents": 2,
+          "presentStudents": 2,
+          "focusRate": 0,
+          "averageAttention": null,
+          "confused": 0,
+          "tired": 0,
+          "away": 1,
+          "riskScore": 81,
+          "autoTelemetryStudents": 1,
+          "cameraTelemetryStudents": 0,
+          "feedbackCount": 0,
+          "eventCount": 19,
+          "snapshotAttention": 0,
+          "sampleCount": 0
+        },
+        "charts": {
+          "status": [
+            {
+              "key": "unknown",
+              "label": "等待采样",
+              "value": 1,
+              "color": "#94a3b8"
+            },
+            {
+              "key": "focused",
+              "label": "专注",
+              "value": 0,
+              "color": "#16a34a"
+            },
+            {
+              "key": "confused",
+              "label": "疑惑",
+              "value": 0,
+              "color": "#d97706"
+            },
+            {
+              "key": "tired",
+              "label": "疲劳",
+              "value": 0,
+              "color": "#dc2626"
+            },
+            {
+              "key": "away",
+              "label": "离开",
+              "value": 1,
+              "color": "#64748b"
+            }
+          ],
+          "rooms": [
+            {
+              "label": "A101 云课堂",
+              "cameraCount": 0,
+              "sensorCount": 2,
+              "occupancyRate": 4,
+              "anomaly": 2
+            },
+            {
+              "label": "A102 实验室",
+              "cameraCount": 0,
+              "sensorCount": 0,
+              "occupancyRate": 0,
+              "anomaly": 0
+            },
+            {
+              "label": "B201 项目教室",
+              "cameraCount": 0,
+              "sensorCount": 0,
+              "occupancyRate": 0,
+              "anomaly": 0
+            }
+          ],
+          "events": [
+            {
+              "label": "meeting-control",
+              "value": 5
+            },
+            {
+              "label": "enter",
+              "value": 4
+            },
+            {
+              "label": "leave",
+              "value": 2
+            },
+            {
+              "label": "classroom-start",
+              "value": 1
+            },
+            {
+              "label": "student-join",
+              "value": 1
+            },
+            {
+              "label": "auto-telemetry",
+              "value": 1
+            }
+          ],
+          "feedback": []
+        },
+        "highlights": [
+          "本节课 47499 分钟；有效过程样本 0 份，参与参考值为样本均值。",
+          "自动遥测覆盖 1/1 名学生，摄像头信号接入 0 名学生。",
+          "课堂低参与风险偏高，建议复盘讲授节奏和互动设计。",
+          "教学回应 1 次，学生确认 0 份，教师完成跟进 0 次。"
+        ],
+        "createdAt": 1788771130620,
+        "timeline": [
+          {
+            "createdAt": 1788771067108,
+            "meetingId": "class-1785921200876",
+            "metrics": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 0,
+              "presentStudents": 0,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 72
+            }
+          },
+          {
+            "createdAt": 1788771075535,
+            "meetingId": "class-1785921200876",
+            "metrics": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 0,
+              "presentStudents": 0,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 72
+            }
+          },
+          {
+            "createdAt": 1788771077849,
+            "meetingId": "class-1785921200876",
+            "metrics": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 0,
+              "presentStudents": 0,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 72
+            }
+          },
+          {
+            "createdAt": 1788771087522,
+            "meetingId": "class-1785921200876",
+            "metrics": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 1,
+              "presentStudents": 1,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 72
+            }
+          },
+          {
+            "createdAt": 1788771091373,
+            "meetingId": "class-1785921200876",
+            "metrics": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 2,
+              "presentStudents": 2,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 81
+            }
+          },
+          {
+            "createdAt": 1788771092626,
+            "meetingId": "class-1785921200876",
+            "metrics": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 1,
+              "presentStudents": 1,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 72
+            }
+          },
+          {
+            "createdAt": 1788771093734,
+            "meetingId": "class-1785921200876",
+            "metrics": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 2,
+              "presentStudents": 2,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 81
+            }
+          },
+          {
+            "createdAt": 1788771097286,
+            "meetingId": "class-1785921200876",
+            "metrics": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 2,
+              "presentStudents": 2,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 81
+            }
+          },
+          {
+            "createdAt": 1788771101375,
+            "meetingId": "class-1785921200876",
+            "metrics": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 2,
+              "presentStudents": 2,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 81
+            }
+          },
+          {
+            "createdAt": 1788771107062,
+            "meetingId": "class-1785921200876",
+            "metrics": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 2,
+              "presentStudents": 2,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 81
+            }
+          },
+          {
+            "createdAt": 1788771108942,
+            "meetingId": "class-1785921200876",
+            "metrics": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 2,
+              "presentStudents": 2,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 81
+            }
+          },
+          {
+            "createdAt": 1788771118598,
+            "meetingId": "class-1785921200876",
+            "metrics": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 2,
+              "presentStudents": 2,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 81
+            }
+          },
+          {
+            "createdAt": 1788771130619,
+            "meetingId": "class-1785921200876",
+            "metrics": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 2,
+              "presentStudents": 2,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 81
+            }
+          }
+        ],
+        "interventions": [
+          {
+            "id": "66f7ed2c-2c48-494b-9d57-f2d0c7340882",
+            "meetingId": "class-1785921200876",
+            "title": "复习讲解",
+            "message": "111",
+            "kind": "review",
+            "reportId": null,
+            "studentIds": [
+              "stu-1785921139611"
+            ],
+            "responses": [],
+            "status": "open",
+            "createdAt": 1788771118598,
+            "baseline": {
+              "totalStudents": 1,
+              "observedStudents": 0,
+              "activeStudents": 0,
+              "sensorPresentStudents": 2,
+              "presentStudents": 2,
+              "focusRate": 0,
+              "averageAttention": 0,
+              "confused": 0,
+              "tired": 0,
+              "away": 1,
+              "riskScore": 81
+            }
+          }
+        ],
+        "dataLoop": {
+          "observed": 1,
+          "feedback": 0,
+          "questions": 1,
+          "interventions": 1,
+          "responses": 0,
+          "closed": 0
+        }
+      },
+      "students": [
+        {
+          "meetingId": "class-1785921200876",
+          "id": "stu-1785921139611",
+          "name": "˯������",
+          "roomId": "A101",
+          "status": "away",
+          "attention": null,
+          "emotion": "稳定",
+          "cameraSignal": "auto-camera-telemetry",
+          "mic": "muted",
+          "handRaised": false,
+          "joinedAt": 1785921201156,
+          "updatedAt": 1785921201283,
+          "sleeping": true,
+          "telemetry": {
+            "pageVisible": true,
+            "windowFocused": true,
+            "idleSeconds": 0,
+            "brightness": null,
+            "motion": null,
+            "faceDetected": null,
+            "faceCount": null,
+            "faceEngine": null,
+            "faceScore": null,
+            "cameraEnabled": false,
+            "reasons": [
+              "超过 45 秒未收到终端上报"
+            ]
+          },
+          "connection": "stale"
+        }
+      ],
+      "feedback": [],
+      "qaHistory": [
+        {
+          "meetingId": "class-1785921200876",
+          "id": 1,
+          "userId": "stu-1785914495825",
+          "question": "这套系统怎么体现 AI 结果参与业务？",
+          "answer": "本地兜底回答：我检索到 3 条课程资料，可先参考：AI 结果需要影响页面或业务流程，例如生成低参与风险、课堂干预建议、学生状态解释和课后学情报告；智课云舱不是普通会议系统，而是面向线上课堂的 AI 学情监测平台；AI 不能只是聊天窗口。如果配置了外部 AI_API_KEY，系统会改由在线模型生成更自然的回答。",
+          "engine": "local-fallback",
+          "model": "none",
+          "sources": [
+            {
+              "id": "doc-ai-2",
+              "title": "AI 模型集成标准",
+              "content": "AI 结果需要影响页面或业务流程，例如生成低参与风险、课堂干预建议、学生状态解释和课后学情报告",
+              "tokens": [
+                "ai",
+                "模型集成标准",
+                "ai",
+                "结果需要影响页面或业务流程",
+                "例如生成低参与风险",
+                "课堂干预建议",
+                "学生状态解释和课后学情报告"
+              ],
+              "score": 18
+            },
+            {
+              "id": "doc-product-1",
+              "title": "智课云舱产品定位",
+              "content": "智课云舱不是普通会议系统，而是面向线上课堂的 AI 学情监测平台",
+              "tokens": [
+                "智课云舱产品定位",
+                "智课云舱不是普通会议系统",
+                "而是面向线上课堂的",
+                "ai",
+                "学情监测平台"
+              ],
+              "score": 14
+            },
+            {
+              "id": "doc-ai-1",
+              "title": "AI 模型集成标准",
+              "content": "AI 不能只是聊天窗口",
+              "tokens": [
+                "ai",
+                "模型集成标准",
+                "ai",
+                "不能只是聊天窗口"
+              ],
+              "score": 12
+            }
+          ],
+          "createdAt": 1785917211820
+        }
+      ],
+      "interventions": [
+        {
+          "id": "66f7ed2c-2c48-494b-9d57-f2d0c7340882",
+          "meetingId": "class-1785921200876",
+          "title": "复习讲解",
+          "message": "111",
+          "kind": "review",
+          "reportId": null,
+          "studentIds": [
+            "stu-1785921139611"
+          ],
+          "responses": [],
+          "status": "open",
+          "createdAt": 1788771118598,
+          "baseline": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 2,
+            "presentStudents": 2,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 81
+          }
+        }
+      ],
+      "reports": [],
+      "events": [
+        {
+          "meetingId": "class-1785921200876",
+          "id": 1,
+          "createdAt": 1785921200876,
+          "type": "classroom-start",
+          "roomId": "A101",
+          "title": "教师开设课堂",
+          "detail": "����ʦ 开设了《���Կ�》，课堂码 A101-0876。"
+        },
+        {
+          "meetingId": "class-1785921200876",
+          "id": 2,
+          "createdAt": 1785921201156,
+          "type": "student-join",
+          "roomId": "A101",
+          "title": "学生加入课堂",
+          "detail": "˯������ 通过课堂码 A101-0876 加入课堂。"
+        },
+        {
+          "meetingId": "class-1785921200876",
+          "id": 3,
+          "createdAt": 1785921201283,
+          "type": "auto-telemetry",
+          "roomId": "A101",
+          "title": "自动学情监测",
+          "detail": "˯������：专注，注意力 82；依据：课堂状态稳定"
+        },
+        {
+          "id": 4,
+          "createdAt": 1788771067108,
+          "type": "screen-share-start",
+          "roomId": "ALL",
+          "title": "教师共享屏幕",
+          "detail": "周老师 开始共享屏幕，学生端将自动显示。"
+        },
+        {
+          "id": 5,
+          "createdAt": 1788771075535,
+          "type": "screen-share-stop",
+          "roomId": "ALL",
+          "title": "屏幕共享结束",
+          "detail": "周老师 停止了屏幕共享。"
+        },
+        {
+          "id": 6,
+          "createdAt": 1788771077849,
+          "type": "meeting-control",
+          "roomId": "ALL",
+          "title": "课堂安静提示",
+          "detail": "周老师 提醒大家保持安静，认真参与本节课堂。"
+        },
+        {
+          "id": 7,
+          "createdAt": 1788771101123,
+          "type": "meeting-control",
+          "roomId": "ALL",
+          "title": "发起课堂投票",
+          "detail": "周老师 发起了课堂理解度投票。"
+        },
+        {
+          "id": 8,
+          "createdAt": 1788771101374,
+          "type": "poll-close",
+          "roomId": "ALL",
+          "title": "课堂投票结束",
+          "detail": "周老师 结束了投票，共收到 0 份回答。"
+        },
+        {
+          "id": 9,
+          "createdAt": 1788771107062,
+          "type": "meeting-control",
+          "roomId": "ALL",
+          "title": "共享课程资料",
+          "detail": "周老师 共享了当前课程资料，学生端可结合 RAG 提问。"
+        },
+        {
+          "id": 10,
+          "createdAt": 1788771108740,
+          "type": "meeting-control",
+          "roomId": "ALL",
+          "title": "共享课程资料",
+          "detail": "周老师 共享了当前课程资料，学生端可结合 RAG 提问。"
+        },
+        {
+          "id": 11,
+          "createdAt": 1788771108942,
+          "type": "meeting-control",
+          "roomId": "ALL",
+          "title": "共享课程资料",
+          "detail": "周老师 共享了当前课程资料，学生端可结合 RAG 提问。"
+        },
+        {
+          "id": 12,
+          "createdAt": 1788771118598,
+          "type": "intervention",
+          "title": "教师发起教学回应",
+          "detail": "复习讲解",
+          "roomId": "ALL"
+        },
+        {
+          "id": 13,
+          "createdAt": 1788771130619,
+          "type": "classroom-end",
+          "title": "课堂结束并归档",
+          "detail": "周老师 完成本节课堂。",
+          "roomId": "ALL"
+        }
+      ],
+      "sensorEvents": [
+        {
+          "id": 1,
+          "type": "enter",
+          "roomId": "A101",
+          "title": "门口传感器：进入",
+          "detail": "A101 云课堂 传感器人数更新为 1",
+          "source": "door-sensor",
+          "confidence": 0.96,
+          "createdAt": 1788771087522
+        },
+        {
+          "id": 2,
+          "type": "enter",
+          "roomId": "A101",
+          "title": "门口传感器：进入",
+          "detail": "A101 云课堂 传感器人数更新为 2",
+          "source": "door-sensor",
+          "confidence": 0.96,
+          "createdAt": 1788771091373
+        },
+        {
+          "id": 3,
+          "type": "leave",
+          "roomId": "A101",
+          "title": "门口传感器：离开",
+          "detail": "A101 云课堂 传感器人数更新为 1",
+          "source": "door-sensor",
+          "confidence": 0.96,
+          "createdAt": 1788771092626
+        },
+        {
+          "id": 4,
+          "type": "enter",
+          "roomId": "A101",
+          "title": "门口传感器：进入",
+          "detail": "A101 云课堂 传感器人数更新为 2",
+          "source": "door-sensor",
+          "confidence": 0.96,
+          "createdAt": 1788771093734
+        },
+        {
+          "id": 5,
+          "type": "enter",
+          "roomId": "A102",
+          "title": "门口传感器：进入",
+          "detail": "A102 实验室 传感器人数更新为 1",
+          "source": "door-sensor",
+          "confidence": 0.96,
+          "createdAt": 1788771096674
+        },
+        {
+          "id": 6,
+          "type": "leave",
+          "roomId": "A102",
+          "title": "门口传感器：离开",
+          "detail": "A102 实验室 传感器人数更新为 0",
+          "source": "door-sensor",
+          "confidence": 0.96,
+          "createdAt": 1788771097286
+        }
+      ],
+      "pollHistory": [],
+      "poll": {
+        "id": "poll-1788771101123",
+        "question": "本节内容理解了吗？",
+        "options": [
+          "已理解",
+          "需要再讲"
+        ],
+        "status": "closed",
+        "answers": {},
+        "createdAt": 1788771101123,
+        "closedAt": 1788771101374
+      },
+      "documents": [
+        {
+          "id": "doc-product",
+          "title": "智课云舱产品定位",
+          "content": "智课云舱不是普通会议系统，而是面向线上课堂的 AI 学情监测平台。系统通过学生摄像头、门口传感器、实时反馈和课程资料问答，帮助教师判断学生是否专注、是否疑惑、是否需要干预。"
+        },
+        {
+          "id": "doc-hardware",
+          "title": "真实硬件与终端能力",
+          "content": "硬件能力必须进入业务闭环。摄像头用于学生状态识别，门口传感器用于教室人数变化，统计结果进入后端保存，并同步到教师端驾驶舱。"
+        },
+        {
+          "id": "doc-ai",
+          "title": "AI 模型集成标准",
+          "content": "AI 不能只是聊天窗口。AI 结果需要影响页面或业务流程，例如生成低参与风险、课堂干预建议、学生状态解释和课后学情报告。"
+        },
+        {
+          "id": "doc-rag",
+          "title": "RAG 轻量知识库",
+          "content": "RAG 要求系统基于指定资料回答。简化实现包括文档切片、关键词匹配、相似度召回、展示依据片段和保存问答记录。"
+        },
+        {
+          "id": "doc-realtime",
+          "title": "实时数据流",
+          "content": "实时数据流要求学生端状态变化、传感器事件、反馈和 AI 报告无需刷新即可同步到教师端。当前系统使用 SSE 实现。"
+        }
+      ]
+    }
+  ],
+  "pollHistory": [],
+  "timeline": [
+    {
+      "createdAt": 1788771067108,
+      "meetingId": "class-1785921200876",
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 0,
+        "presentStudents": 0,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 72
+      }
+    },
+    {
+      "createdAt": 1788771075535,
+      "meetingId": "class-1785921200876",
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 0,
+        "presentStudents": 0,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 72
+      }
+    },
+    {
+      "createdAt": 1788771077849,
+      "meetingId": "class-1785921200876",
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 0,
+        "presentStudents": 0,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 72
+      }
+    },
+    {
+      "createdAt": 1788771087522,
+      "meetingId": "class-1785921200876",
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 1,
+        "presentStudents": 1,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 72
+      }
+    },
+    {
+      "createdAt": 1788771091373,
+      "meetingId": "class-1785921200876",
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 2,
+        "presentStudents": 2,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 81
+      }
+    },
+    {
+      "createdAt": 1788771092626,
+      "meetingId": "class-1785921200876",
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 1,
+        "presentStudents": 1,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 72
+      }
+    },
+    {
+      "createdAt": 1788771093734,
+      "meetingId": "class-1785921200876",
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 2,
+        "presentStudents": 2,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 81
+      }
+    },
+    {
+      "createdAt": 1788771097286,
+      "meetingId": "class-1785921200876",
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 2,
+        "presentStudents": 2,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 81
+      }
+    },
+    {
+      "createdAt": 1788771101375,
+      "meetingId": "class-1785921200876",
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 2,
+        "presentStudents": 2,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 81
+      }
+    },
+    {
+      "createdAt": 1788771107062,
+      "meetingId": "class-1785921200876",
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 2,
+        "presentStudents": 2,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 81
+      }
+    },
+    {
+      "createdAt": 1788771108942,
+      "meetingId": "class-1785921200876",
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 2,
+        "presentStudents": 2,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 81
+      }
+    },
+    {
+      "createdAt": 1788771118598,
+      "meetingId": "class-1785921200876",
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 2,
+        "presentStudents": 2,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 81
+      }
+    },
+    {
+      "createdAt": 1788771130619,
+      "meetingId": "class-1785921200876",
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 2,
+        "presentStudents": 2,
+        "focusRate": 0,
+        "averageAttention": 0,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 81
+      }
+    }
+  ],
+  "meeting": {
+    "id": "class-1785921200876",
+    "code": "A101-0876",
+    "title": "���Կ�",
+    "topic": "t",
+    "roomId": "A101",
+    "status": "ended",
+    "teacherId": "teacher-1785921139125",
+    "startedAt": 1785921200876,
+    "endedAt": 1788771130619,
+    "notice": {
+      "id": 1788771108942,
+      "title": "共享课程资料",
+      "message": "周老师 共享了当前课程资料，学生端可结合 RAG 提问。"
+    }
+  },
+  "users": [
+    {
+      "id": "teacher-001",
+      "name": "周老师",
+      "role": "teacher",
+      "roomId": "A101"
+    },
+    {
+      "id": "stu-1785914495825",
+      "name": "演示学生",
+      "role": "student",
+      "roomId": "A101"
+    },
+    {
+      "id": "teacher-1785921139125",
+      "name": "����ʦ",
+      "role": "teacher",
+      "roomId": "A101"
+    },
+    {
+      "id": "stu-1785921139611",
+      "name": "˯������",
+      "role": "student",
+      "roomId": "A101"
+    },
+    {
+      "id": "teacher-15028edd-3488-4f13-8c43-35bcc6fb014d",
+      "name": "VAN老师",
+      "role": "teacher",
+      "roomId": "A101"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "A101",
+      "name": "A101 云课堂",
+      "capacity": 48,
+      "liveCount": 2,
+      "sensorCount": 2
+    },
+    {
+      "id": "A102",
+      "name": "A102 实验室",
+      "capacity": 36,
+      "liveCount": 0,
+      "sensorCount": 0
+    },
+    {
+      "id": "B201",
+      "name": "B201 项目教室",
+      "capacity": 60,
+      "liveCount": 0,
+      "sensorCount": 0
+    }
+  ],
+  "students": [
+    {
+      "meetingId": "class-1785921200876",
+      "id": "stu-1785921139611",
+      "name": "˯������",
+      "roomId": "A101",
+      "status": "away",
+      "attention": null,
+      "emotion": "稳定",
+      "cameraSignal": "auto-camera-telemetry",
+      "mic": "muted",
+      "handRaised": false,
+      "joinedAt": 1785921201156,
+      "updatedAt": 1785921201283,
+      "sleeping": true,
+      "telemetry": {
+        "pageVisible": true,
+        "windowFocused": true,
+        "idleSeconds": 0,
+        "brightness": null,
+        "motion": null,
+        "faceDetected": null,
+        "faceCount": null,
+        "faceEngine": null,
+        "faceScore": null,
+        "cameraEnabled": false,
+        "reasons": [
+          "超过 45 秒未收到终端上报"
+        ]
+      },
+      "connection": "stale"
+    }
+  ],
+  "sensorEvents": [
+    {
+      "id": 1,
+      "type": "enter",
+      "roomId": "A101",
+      "title": "门口传感器：进入",
+      "detail": "A101 云课堂 传感器人数更新为 1",
+      "source": "door-sensor",
+      "confidence": 0.96,
+      "createdAt": 1788771087522
+    },
+    {
+      "id": 2,
+      "type": "enter",
+      "roomId": "A101",
+      "title": "门口传感器：进入",
+      "detail": "A101 云课堂 传感器人数更新为 2",
+      "source": "door-sensor",
+      "confidence": 0.96,
+      "createdAt": 1788771091373
+    },
+    {
+      "id": 3,
+      "type": "leave",
+      "roomId": "A101",
+      "title": "门口传感器：离开",
+      "detail": "A101 云课堂 传感器人数更新为 1",
+      "source": "door-sensor",
+      "confidence": 0.96,
+      "createdAt": 1788771092626
+    },
+    {
+      "id": 4,
+      "type": "enter",
+      "roomId": "A101",
+      "title": "门口传感器：进入",
+      "detail": "A101 云课堂 传感器人数更新为 2",
+      "source": "door-sensor",
+      "confidence": 0.96,
+      "createdAt": 1788771093734
+    },
+    {
+      "id": 5,
+      "type": "enter",
+      "roomId": "A102",
+      "title": "门口传感器：进入",
+      "detail": "A102 实验室 传感器人数更新为 1",
+      "source": "door-sensor",
+      "confidence": 0.96,
+      "createdAt": 1788771096674
+    },
+    {
+      "id": 6,
+      "type": "leave",
+      "roomId": "A102",
+      "title": "门口传感器：离开",
+      "detail": "A102 实验室 传感器人数更新为 0",
+      "source": "door-sensor",
+      "confidence": 0.96,
+      "createdAt": 1788771097286
+    }
+  ],
+  "classroomEvents": [
+    {
+      "meetingId": "class-1785921200876",
+      "id": 1,
+      "createdAt": 1785921200876,
+      "type": "classroom-start",
+      "roomId": "A101",
+      "title": "教师开设课堂",
+      "detail": "����ʦ 开设了《���Կ�》，课堂码 A101-0876。"
+    },
+    {
+      "meetingId": "class-1785921200876",
+      "id": 2,
+      "createdAt": 1785921201156,
+      "type": "student-join",
+      "roomId": "A101",
+      "title": "学生加入课堂",
+      "detail": "˯������ 通过课堂码 A101-0876 加入课堂。"
+    },
+    {
+      "meetingId": "class-1785921200876",
+      "id": 3,
+      "createdAt": 1785921201283,
+      "type": "auto-telemetry",
+      "roomId": "A101",
+      "title": "自动学情监测",
+      "detail": "˯������：专注，注意力 82；依据：课堂状态稳定"
+    },
+    {
+      "id": 4,
+      "createdAt": 1788771067108,
+      "type": "screen-share-start",
+      "roomId": "ALL",
+      "title": "教师共享屏幕",
+      "detail": "周老师 开始共享屏幕，学生端将自动显示。"
+    },
+    {
+      "id": 5,
+      "createdAt": 1788771075535,
+      "type": "screen-share-stop",
+      "roomId": "ALL",
+      "title": "屏幕共享结束",
+      "detail": "周老师 停止了屏幕共享。"
+    },
+    {
+      "id": 6,
+      "createdAt": 1788771077849,
+      "type": "meeting-control",
+      "roomId": "ALL",
+      "title": "课堂安静提示",
+      "detail": "周老师 提醒大家保持安静，认真参与本节课堂。"
+    },
+    {
+      "id": 7,
+      "createdAt": 1788771101123,
+      "type": "meeting-control",
+      "roomId": "ALL",
+      "title": "发起课堂投票",
+      "detail": "周老师 发起了课堂理解度投票。"
+    },
+    {
+      "id": 8,
+      "createdAt": 1788771101374,
+      "type": "poll-close",
+      "roomId": "ALL",
+      "title": "课堂投票结束",
+      "detail": "周老师 结束了投票，共收到 0 份回答。"
+    },
+    {
+      "id": 9,
+      "createdAt": 1788771107062,
+      "type": "meeting-control",
+      "roomId": "ALL",
+      "title": "共享课程资料",
+      "detail": "周老师 共享了当前课程资料，学生端可结合 RAG 提问。"
+    },
+    {
+      "id": 10,
+      "createdAt": 1788771108740,
+      "type": "meeting-control",
+      "roomId": "ALL",
+      "title": "共享课程资料",
+      "detail": "周老师 共享了当前课程资料，学生端可结合 RAG 提问。"
+    },
+    {
+      "id": 11,
+      "createdAt": 1788771108942,
+      "type": "meeting-control",
+      "roomId": "ALL",
+      "title": "共享课程资料",
+      "detail": "周老师 共享了当前课程资料，学生端可结合 RAG 提问。"
+    },
+    {
+      "id": 12,
+      "createdAt": 1788771118598,
+      "type": "intervention",
+      "title": "教师发起教学回应",
+      "detail": "复习讲解",
+      "roomId": "ALL"
+    },
+    {
+      "id": 13,
+      "createdAt": 1788771130619,
+      "type": "classroom-end",
+      "title": "课堂结束并归档",
+      "detail": "周老师 完成本节课堂。",
+      "roomId": "ALL"
+    }
+  ],
+  "feedback": [],
+  "knowledgeDocs": [
+    {
+      "id": "doc-product",
+      "title": "智课云舱产品定位",
+      "content": "智课云舱不是普通会议系统，而是面向线上课堂的 AI 学情监测平台。系统通过学生摄像头、门口传感器、实时反馈和课程资料问答，帮助教师判断学生是否专注、是否疑惑、是否需要干预。"
+    },
+    {
+      "id": "doc-hardware",
+      "title": "真实硬件与终端能力",
+      "content": "硬件能力必须进入业务闭环。摄像头用于学生状态识别，门口传感器用于教室人数变化，统计结果进入后端保存，并同步到教师端驾驶舱。"
+    },
+    {
+      "id": "doc-ai",
+      "title": "AI 模型集成标准",
+      "content": "AI 不能只是聊天窗口。AI 结果需要影响页面或业务流程，例如生成低参与风险、课堂干预建议、学生状态解释和课后学情报告。"
+    },
+    {
+      "id": "doc-rag",
+      "title": "RAG 轻量知识库",
+      "content": "RAG 要求系统基于指定资料回答。简化实现包括文档切片、关键词匹配、相似度召回、展示依据片段和保存问答记录。"
+    },
+    {
+      "id": "doc-realtime",
+      "title": "实时数据流",
+      "content": "实时数据流要求学生端状态变化、传感器事件、反馈和 AI 报告无需刷新即可同步到教师端。当前系统使用 SSE 实现。"
+    }
+  ],
+  "qaHistory": [
+    {
+      "meetingId": "class-1785921200876",
+      "id": 1,
+      "userId": "stu-1785914495825",
+      "question": "这套系统怎么体现 AI 结果参与业务？",
+      "answer": "本地兜底回答：我检索到 3 条课程资料，可先参考：AI 结果需要影响页面或业务流程，例如生成低参与风险、课堂干预建议、学生状态解释和课后学情报告；智课云舱不是普通会议系统，而是面向线上课堂的 AI 学情监测平台；AI 不能只是聊天窗口。如果配置了外部 AI_API_KEY，系统会改由在线模型生成更自然的回答。",
+      "engine": "local-fallback",
+      "model": "none",
+      "sources": [
+        {
+          "id": "doc-ai-2",
+          "title": "AI 模型集成标准",
+          "content": "AI 结果需要影响页面或业务流程，例如生成低参与风险、课堂干预建议、学生状态解释和课后学情报告",
+          "tokens": [
+            "ai",
+            "模型集成标准",
+            "ai",
+            "结果需要影响页面或业务流程",
+            "例如生成低参与风险",
+            "课堂干预建议",
+            "学生状态解释和课后学情报告"
+          ],
+          "score": 18
+        },
+        {
+          "id": "doc-product-1",
+          "title": "智课云舱产品定位",
+          "content": "智课云舱不是普通会议系统，而是面向线上课堂的 AI 学情监测平台",
+          "tokens": [
+            "智课云舱产品定位",
+            "智课云舱不是普通会议系统",
+            "而是面向线上课堂的",
+            "ai",
+            "学情监测平台"
+          ],
+          "score": 14
+        },
+        {
+          "id": "doc-ai-1",
+          "title": "AI 模型集成标准",
+          "content": "AI 不能只是聊天窗口",
+          "tokens": [
+            "ai",
+            "模型集成标准",
+            "ai",
+            "不能只是聊天窗口"
+          ],
+          "score": 12
+        }
+      ],
+      "createdAt": 1785917211820
+    }
+  ],
+  "aiReports": [],
+  "classReviews": [
+    {
+      "id": 1,
+      "meeting": {
+        "id": "class-1785921200876",
+        "code": "A101-0876",
+        "title": "���Կ�",
+        "topic": "t",
+        "roomId": "A101",
+        "status": "ended",
+        "teacherId": "teacher-1785921139125",
+        "startedAt": 1785921200876,
+        "endedAt": 1788771130619,
+        "notice": {
+          "id": 1788771108942,
+          "title": "共享课程资料",
+          "message": "周老师 共享了当前课程资料，学生端可结合 RAG 提问。"
+        },
+        "durationMinutes": 47499
+      },
+      "metrics": {
+        "totalStudents": 1,
+        "observedStudents": 0,
+        "activeStudents": 0,
+        "sensorPresentStudents": 2,
+        "presentStudents": 2,
+        "focusRate": 0,
+        "averageAttention": null,
+        "confused": 0,
+        "tired": 0,
+        "away": 1,
+        "riskScore": 81,
+        "autoTelemetryStudents": 1,
+        "cameraTelemetryStudents": 0,
+        "feedbackCount": 0,
+        "eventCount": 19,
+        "snapshotAttention": 0,
+        "sampleCount": 0
+      },
+      "charts": {
+        "status": [
+          {
+            "key": "unknown",
+            "label": "等待采样",
+            "value": 1,
+            "color": "#94a3b8"
+          },
+          {
+            "key": "focused",
+            "label": "专注",
+            "value": 0,
+            "color": "#16a34a"
+          },
+          {
+            "key": "confused",
+            "label": "疑惑",
+            "value": 0,
+            "color": "#d97706"
+          },
+          {
+            "key": "tired",
+            "label": "疲劳",
+            "value": 0,
+            "color": "#dc2626"
+          },
+          {
+            "key": "away",
+            "label": "离开",
+            "value": 1,
+            "color": "#64748b"
+          }
+        ],
+        "rooms": [
+          {
+            "label": "A101 云课堂",
+            "cameraCount": 0,
+            "sensorCount": 2,
+            "occupancyRate": 4,
+            "anomaly": 2
+          },
+          {
+            "label": "A102 实验室",
+            "cameraCount": 0,
+            "sensorCount": 0,
+            "occupancyRate": 0,
+            "anomaly": 0
+          },
+          {
+            "label": "B201 项目教室",
+            "cameraCount": 0,
+            "sensorCount": 0,
+            "occupancyRate": 0,
+            "anomaly": 0
+          }
+        ],
+        "events": [
+          {
+            "label": "meeting-control",
+            "value": 5
+          },
+          {
+            "label": "enter",
+            "value": 4
+          },
+          {
+            "label": "leave",
+            "value": 2
+          },
+          {
+            "label": "classroom-start",
+            "value": 1
+          },
+          {
+            "label": "student-join",
+            "value": 1
+          },
+          {
+            "label": "auto-telemetry",
+            "value": 1
+          }
+        ],
+        "feedback": []
+      },
+      "highlights": [
+        "本节课 47499 分钟；有效过程样本 0 份，参与参考值为样本均值。",
+        "自动遥测覆盖 1/1 名学生，摄像头信号接入 0 名学生。",
+        "课堂低参与风险偏高，建议复盘讲授节奏和互动设计。",
+        "教学回应 1 次，学生确认 0 份，教师完成跟进 0 次。"
+      ],
+      "createdAt": 1788771130620,
+      "timeline": [
+        {
+          "createdAt": 1788771067108,
+          "meetingId": "class-1785921200876",
+          "metrics": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 0,
+            "presentStudents": 0,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 72
+          }
+        },
+        {
+          "createdAt": 1788771075535,
+          "meetingId": "class-1785921200876",
+          "metrics": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 0,
+            "presentStudents": 0,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 72
+          }
+        },
+        {
+          "createdAt": 1788771077849,
+          "meetingId": "class-1785921200876",
+          "metrics": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 0,
+            "presentStudents": 0,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 72
+          }
+        },
+        {
+          "createdAt": 1788771087522,
+          "meetingId": "class-1785921200876",
+          "metrics": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 1,
+            "presentStudents": 1,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 72
+          }
+        },
+        {
+          "createdAt": 1788771091373,
+          "meetingId": "class-1785921200876",
+          "metrics": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 2,
+            "presentStudents": 2,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 81
+          }
+        },
+        {
+          "createdAt": 1788771092626,
+          "meetingId": "class-1785921200876",
+          "metrics": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 1,
+            "presentStudents": 1,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 72
+          }
+        },
+        {
+          "createdAt": 1788771093734,
+          "meetingId": "class-1785921200876",
+          "metrics": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 2,
+            "presentStudents": 2,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 81
+          }
+        },
+        {
+          "createdAt": 1788771097286,
+          "meetingId": "class-1785921200876",
+          "metrics": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 2,
+            "presentStudents": 2,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 81
+          }
+        },
+        {
+          "createdAt": 1788771101375,
+          "meetingId": "class-1785921200876",
+          "metrics": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 2,
+            "presentStudents": 2,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 81
+          }
+        },
+        {
+          "createdAt": 1788771107062,
+          "meetingId": "class-1785921200876",
+          "metrics": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 2,
+            "presentStudents": 2,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 81
+          }
+        },
+        {
+          "createdAt": 1788771108942,
+          "meetingId": "class-1785921200876",
+          "metrics": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 2,
+            "presentStudents": 2,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 81
+          }
+        },
+        {
+          "createdAt": 1788771118598,
+          "meetingId": "class-1785921200876",
+          "metrics": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 2,
+            "presentStudents": 2,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 81
+          }
+        },
+        {
+          "createdAt": 1788771130619,
+          "meetingId": "class-1785921200876",
+          "metrics": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 2,
+            "presentStudents": 2,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 81
+          }
+        }
+      ],
+      "interventions": [
+        {
+          "id": "66f7ed2c-2c48-494b-9d57-f2d0c7340882",
+          "meetingId": "class-1785921200876",
+          "title": "复习讲解",
+          "message": "111",
+          "kind": "review",
+          "reportId": null,
+          "studentIds": [
+            "stu-1785921139611"
+          ],
+          "responses": [],
+          "status": "open",
+          "createdAt": 1788771118598,
+          "baseline": {
+            "totalStudents": 1,
+            "observedStudents": 0,
+            "activeStudents": 0,
+            "sensorPresentStudents": 2,
+            "presentStudents": 2,
+            "focusRate": 0,
+            "averageAttention": 0,
+            "confused": 0,
+            "tired": 0,
+            "away": 1,
+            "riskScore": 81
+          }
+        }
+      ],
+      "dataLoop": {
+        "observed": 1,
+        "feedback": 0,
+        "questions": 1,
+        "interventions": 1,
+        "responses": 0,
+        "closed": 0
+      }
+    }
+  ],
+  "poll": {
+    "id": "poll-1788771101123",
+    "question": "本节内容理解了吗？",
+    "options": [
+      "已理解",
+      "需要再讲"
+    ],
+    "status": "closed",
+    "answers": {},
+    "createdAt": 1788771101123,
+    "closedAt": 1788771101374
+  }
+}

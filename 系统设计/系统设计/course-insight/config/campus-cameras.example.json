@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "devices": [
+    {
+      "id": "camera-room-example",
+      "name": "示例教室摄像头",
+      "roomId": "201",
+      "host": "192.0.2.10",
+      "protocol": "rtsp",
+      "port": 554,
+      "streamPath": "",
+      "username": "",
+      "password": "",
+      "allowedUsernames": []
+    }
+  ]
+}
